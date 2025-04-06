@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let currentNumber = 1;
     const numbers = Array.from({ length: 100 }, (_, i) => i + 1);
-    let playerNames = { 1: "Player 1", 2: "Player 2" };
+    let playerNames = { 1: "", 2: "" };
     let playerTimes = { 1: 0, 2: 0 };
     let currentPlayer = null;
     let currentPlayerTimerInterval = null;
@@ -213,6 +213,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 const loser = playerTimes[1] < playerTimes[2] ? playerNames[2] : playerNames[1];
                 const time1 = formatTime(playerTimes[1]);
                 const time2 = formatTime(playerTimes[2]);
+
+                confetti({
+                    particleCount: 150,
+                    spread: 70,
+                    origin: { y: 0.6 }
+                });
 
                 setTimeout(() => {
                      alert(`Game Over!\n\n${playerNames[1]}: ${time1}s\n${playerNames[2]}: ${time2}s\n\n${winner} wins!`);
