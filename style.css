@@ -5,6 +5,7 @@ body {
     align-items: center;
     margin-top: 20px;
     padding: 0 10px; /* Add horizontal padding for small screens */
+    background-color: #F5F5DC; /* Very light brown background */
 }
 
 .player-info-container {
@@ -58,17 +59,17 @@ body {
 #game-grid {
     display: grid;
     /* Use vmin for responsive grid cells, with a min size */
-    grid-template-columns: repeat(10, minmax(30px, 4.5vmin)); 
-    grid-template-rows: repeat(10, minmax(30px, 4.5vmin));
+    grid-template-columns: repeat(10, minmax(30px, 5.5vmin)); /* Increased max cell size */
+    grid-template-rows: repeat(10, minmax(30px, 5.5vmin));    /* Increased max cell size */
     gap: clamp(2px, 1vmin, 5px); /* Responsive gap */
     border: 2px solid black;
     padding: clamp(2px, 1vmin, 5px); /* Responsive padding */
     margin-bottom: 15px;
     /* Add max-width to prevent grid becoming too large */
-    max-width: 95vw; 
+    max-width: 95vw;
     /* Ensure grid itself doesn't exceed a reasonable pixel size either */
     /* max-width: calc(10 * 50px + 9 * 5px + 2 * 5px + 4px); /* Approx original max size */
-    max-width: 560px; /* Simplified max-width */ 
+    max-width: 700px; /* Increased overall max width */
 }
 
 .grid-item {
