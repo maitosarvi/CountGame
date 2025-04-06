@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Count Game - Two Player</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Count Game - Two Players</h1>
+
+    <div class="player-info-container">
+        <div class="player-info" id="player1-info">
+            <h2>Player 1: <span id="player1-name">Player 1</span></h2>
+            <p>Time: <span id="player1-timer">0.00</span></p>
+        </div>
+        <div class="player-info" id="player2-info">
+            <h2>Player 2: <span id="player2-name">Player 2</span></h2>
+            <p>Time: <span id="player2-timer">0.00</span></p>
+        </div>
+    </div>
+
+    <div class="game-status">
+         <p>Next Number: <span id="next-number">1</span></p>
+         <p>Current Turn: <span id="current-turn">-</span></p>
+         <!-- Score is implicitly tracked by the next number -->
+    </div>
+
+    <div id="game-grid">
+        <!-- Numbers will be generated here by JavaScript -->
+    </div>
+    <div class="controls">
+        <button id="start-button">Start Game</button>
+        <button id="restart-button">Restart Game</button>
+        <button id="pause-button">Pause</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
